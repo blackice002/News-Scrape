@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="bg-banner text-center col-md-12 mb-2">
+        <span class="mb-0 bannertext">Android <span class="text-uppercase ">News</span> Scraper</span>
+    </div>
+    <div class="d-flex justify-content-between">
+        <a href="/scrape" action="button" class="btn btn-lg  btn-light">Find current News</a>
+        <a href="/notes" action="button" class="btn btn-lg btn-light">Saved Article</a>
+        <a href="/dropdb" action="button" class="btn btn-lg btn-light">CLEAR DATA</a>
+</div>
+                {{#each things}}
+                <div class="card text-white bg-dark mb-2">
+                    <div class="row m-1">
+                        <div class="align-self-center col-md-4 col-sm-12">
+                            <img class="card-img " style="width:100%" src="{{this.image}}" alt="jetsetImg">
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="card-body ">
+                                <h5 class="card-title">{{this.title}}</h5>
+                                <p class="card-text overflow-hidden" >{{this.summary}}</p>
+                            </div>
+                            <div class="text-right">
+                                <a href={{this.link}} class="btn  btn-dark" role="button">View Full Article</a>
+                                <button class="clickybutton btn btn-light montfont"
+                                    data-id="{{this._id}}">Save article</button><br />
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
