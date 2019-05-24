@@ -1,0 +1,48 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: black;
+}
+
+.bg-banner{
+    height:10vh;
+
+}
+
+.bannertext {
+    align-items: center;
+    padding-top:20px;
+    font-size: 30px;
+    text-align: left;
+    
+}
+.card{
+color:black;
+}
+
+.montfont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group {
+    font-weight: bolder;
+}
+
+
+button:hover {
+    background-color: #e9bcb7;
+    background-image: linear-gradient(315deg, #151616 0%, #423d3d 74%);
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    color: rgb(190, 190, 190);
+    font-weight: bolder;
+    font-family: 'Faster One', cursive;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}

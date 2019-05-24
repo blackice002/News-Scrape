@@ -8,73 +8,16 @@
     <title>| Android News | </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+    {{!-- <link rel="stylesheet" href="/public/css/style.css"> --}}
+    <link rel="stylesheet" href="../css/style.css">
     
-    <style>
-        body {
-            font-family: 'Abel', sans-serif;
-            color: white;
-        }
-
-        .shadowed {
-            text-shadow: 2px 2px 4px #000000;
-        }
-
-        .bannertext {
-            font-size: 5rem;
-        }
-
-        .bg-banner {
-            background-color: #e9e9e9;
-            background-image: linear-gradient(315deg, #e7e7e7 0%, #a5a5a5 74%);
-        }
-        
-        .bg-banner2 {
-            background-color: #e6e6e6;
-            background-image: linear-gradient(315deg, #d3d3d3 0%, #fff1f1 74%);
-        }
-        
-        .montfont {
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .form-group {
-            font-weight: bolder;
-        }
-        
-        .container {
-            width:95% !important;
-            background-color: rgba(226, 226, 226, 0.822);
-        }
-        
-        button:hover {
-            background-color: #e9bcb7;
-            background-image: linear-gradient(315deg, #151616 0%, #423d3d 74%);
-            -webkit-background-clip: border-box;
-            background-clip: border-box;
-            color: rgb(190, 190, 190);
-            font-weight: bolder;
-            font-family: 'Faster One', cursive;
-            text-shadow: 2px 2px 4px #000000;
-        }
-
-        #myVideo {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%; 
-            min-height: 100%;
-        }
-    </style>
 </head>
 
-<body class="bg-none" style="background: url('https://www.toptal.com/designers/subtlepatterns/patterns/ep_naturalblack.png');">
+<body>
 
 {{{body}}}
 
 <div class="modal fade " id="noteModal" tabindex="-1" data-keyboard="false" data-backdrop="static">
-    <video autoplay muted loop id="myVideo">
-        <source src="media/vidbg.mp4" type="video/mp4">
-    </video>
     <div class="modal-dialog modal-dialog-centered modal-lg bg-none" role="document">
         {{!-- <div class="modal-content rounded" style="background-color: rgba(0, 0, 0, 0.89)"></div> --}}
         <div class="modal-content rounded bg-dark">            
@@ -97,7 +40,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <script src="app.js"></script>
+    {{!-- <script src="app.js"></script> --}}
+    <script src="/js/saved.js"></script>
 
 </body>
 
