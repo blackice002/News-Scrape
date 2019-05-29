@@ -6,13 +6,12 @@
     <div class="d-flex justify-content-between">
         <a href="/" action="button" class="btn btn-sm  btn-light">Home</a>
         <a href="/saved" action="button" class="btn btn-sm btn-light">Saved Article</a>
-        <a href="/clear" action="button" class="btn btn-sm btn-light">CLEAR DATA</a>
+        <a href="/clear" action="button" class="btn btn-sm btn-light">Clear Data</a>
 </div>
   
 <div class="container">
   <h3>Saved articles</h3>
- {{#each articles}}
-     <div class="card text-white bg-light mb-2" data-_id="{{this._id}}">
+ {{#each allArticle}}
         <div class="row m-1">
             <div class="align-self-center col-md-4 col-sm-12">
                 <img class="card-img " style="width:100%" src="{{this.image}}" alt="jetsetImg">
@@ -26,10 +25,8 @@
                 <a data-articleId= {{this._id}} class="btn btn-light text-danger remove-btn" role="button">Remove from saved</a>
                 <a data-articleId= {{this._id}} class="btn btn-light text-success note-modal-btn">Add Note</a><br />
                 </div>
-
             </div>
         </div>
-    </div>
     {{/each}} 
 </div>
 
@@ -43,7 +40,7 @@
         <ul class="notes-list">
         </ul>
         <div class="form-group">
-          <label for="note-area">New note</label>
+          <label for="note-area">New Note</label>
           <textarea name="new-note-area" class="form-control" id="note-body" rows="2" required></textarea>
         </div>
         <div class="modal-footer">

@@ -43,7 +43,6 @@ app.get("/scrape", (req, res) => {
                     console.log(err);
                 });
         });
-        res.json(result);
         res.redirect("/")
     });
 
@@ -61,22 +60,25 @@ app.get("/", (req, res) => {
 //routes for the saved article
 app.get("/saved", (req, res) => {
     db.Article.find({ saved: true })
-        .sort({ date: -1 })
         .then((dbArticle) => {
-            res.render("saved", { articles: dbArticle });
+            res.render("saved", { allArticle: dbArticle });
         });
 });
 
-// update the article from all alticle to save
-app.put("/saved/:id", (req, res) => {
+// update the article from all arlticle to save
+app.put("/saved/:id", (req, res)=> {
     db.Article.findOneAndUpdate(
-        req.params.id,{ 
-            $set: req.body
-        },{ new: true
+        req.params.id, {
+          $set: req.body
+        }, {
+          new: true
         })
-        .then((dbArticle) => res.json(dbArticle))
-})
-
+      .then((dbArticle)=> 
+        res.json(dbArticle))
+      .catch(function(err) {
+        res.json(err);
+      });
+  });
 
 // Route for grabbing a specific Article by id, populate it with it's note
 app.get("/articles/:id", (req, res) => {
@@ -105,16 +107,6 @@ app.post("/articles/:id", (req, res) => {
         .then((dbArticle) => res.json(dbArticle))
         .catch((err) => res.json(err));
 });
-
-// app.post("/save",(req, res) => {
-//     db.Article.create(req.body)
-//     .then(dbArticle => res.json(dbArticle))
-//     .catch(function(err) {
-//       // If an error occurred, log it
-//       console.log(err);
-//       res.json(err);
-//     });
-// });
 
 
 // remove the all articel from page
