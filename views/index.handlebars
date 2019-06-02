@@ -1,33 +1,49 @@
-<div class="container">
-    <div class="bg-banner col-md-12 mb-2">
-        <span class="mb-0 bannertext">Android <span class="text-uppercase " style="color:red">News</span> Scraper</span>
+<div class="navWrapper">
+    <div class="container">
+        <div class="bg-banner col-md-12 mb-2 text-uppercase">
+            <span class="mb-0 bannertext">Android <span class="text-uppercase " style="color:red">News</span>
+                Scraper</span>
+        </div>
+        <div class="d-flex justify-content-between">
+            <a action="button" class="btn btn-sm btn-light scrape">Find current News</a>
+            <a href="/saved" action="button" class="btn btn-sm btn-light">Saved Article</a>
+            <a href="/clear" action="button" class="btn btn-sm btn-light">Clear Article</a>
+        </div>
     </div>
-    <div class="d-flex justify-content-between">
-        <a href="/scrape" action="button" class="btn btn-sm  btn-light">Find current News</a>
-        <a href="/saved" action="button" class="btn btn-sm btn-light">Saved Article</a>
-        <a href="/clear" action="button" class="btn btn-sm btn-light">Clear Article</a>
-    </div>
+    <hr>
 
-    <div class="article-container">
-    {{#each allArticle}}
-    <div class="card text-white bg-light mb-2">
-        <div class="row m-1">
+</div>
+
+
+
+<div class="container">
+    {{#each article}}
+    <div class="card bg-light mb-2">
+        <div class="row m-1 ">
             <div class="align-self-center col-md-4 col-sm-12">
-                <img class="card-img " style="width:100%" src="{{this.image}}" alt="jetsetImg">
+                <img class="card-img" style="width:100%" src="{{this.image}}" alt="blackice">
             </div>
             <div class="col-md-8 col-sm-12">
-                <div class="card-body ">
+                <div class="card-body">
                     <h5 class="card-title" style="color:red">{{this.title}}</h5>
-                    <p class="card-text overflow-hidden" style="color:black">{{this.summary}}</p>
-                </div>
-                <div class="text-right">
-                    <a href={{this.link}} class="btn btn-light text-primary" role="button">View Full Article</a>
-                <a class="btn btn-light text-success save">Save Article</a><br />
-                </div>
+                    <p class="card-text">{{this.summary}}</p>
+                    <div class="row">
+                        <div class="col">
+                            <a href={{this.link}} target="_blank" class="card-link">Read more...</a>
+                        </div>
 
+                        <div class="col-lg-4 align-self-end text-right">
+                            {{#if saved}}
+                            <button class="btn btn-secondary btn-sm m-2 disabled">Article Saved</button>
+                            {{else}}
+                            <button class="btn btn-success btn-sm m-2 btn-save" data-id="{{this._id}}">Save
+                                Article</button>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     {{/each}}
-    </div>
 </div>

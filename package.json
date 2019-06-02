@@ -1,20 +1,32 @@
 {
   "name": "news-scrape",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node app"
-  },
+  "version": "1.0.0",
+  "description": "find the latest news from androidpolice",
+  "main": "server.js",
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.3",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
     "express-handlebars": "^3.1.0",
-    "hbs": "~4.0.4",
-    "http-errors": "~1.6.3",
     "mongoose": "^5.5.11",
-    "morgan": "~1.9.1"
-  }
+    "nodemon": "^1.19.1",
+    "express": "^4.16.2",
+    "mongojs": "^2.4.1",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackice002/News-Scrape.git"
+  },
+  "author": "Puspa Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackice002/News-Scrape/issues"
+  },
+  "homepage": "https://github.com/blackice002/News-Scrape#readme"
 }

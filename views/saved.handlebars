@@ -1,53 +1,52 @@
-  
-  <div class="container">
-    <div class="bg-banner col-md-12 mb-2">
-        <span class="mb-0 bannertext">Android <span class="text-uppercase " style="color:red">News</span> Scraper</span>
-    </div>
+<div class="navWrapper">
+    <div class="container">
+        <div class="bg-banner col-md-12 mb-2 text-uppercase">
+            <span class="mb-0 bannertext">Android <span class="text-uppercase " style="color:red">News</span>
+                Scraper</span>
+        </div>
+    
     <div class="d-flex justify-content-between">
         <a href="/" action="button" class="btn btn-sm  btn-light">Home</a>
         <a href="/saved" action="button" class="btn btn-sm btn-light">Saved Article</a>
         <a href="/clear" action="button" class="btn btn-sm btn-light">Clear Data</a>
+    </div>
 </div>
-  
+    <hr>
+</div>
+
 <div class="container">
-  <h3>Saved articles</h3>
- {{#each allArticle}}
+    {{#each article}}
+    <div class="card bg-light mb-2">
         <div class="row m-1">
             <div class="align-self-center col-md-4 col-sm-12">
-                <img class="card-img " style="width:100%" src="{{this.image}}" alt="jetsetImg">
+                <img class="card-img" style="width:100%" src="{{this.image}}" alt="blackice">
             </div>
             <div class="col-md-8 col-sm-12">
-                <div class="card-body ">
+                <div class="card-body">
                     <h5 class="card-title" style="color:red">{{this.title}}</h5>
-                    <p class="card-text overflow-hidden" style="color:black">{{this.summary}}</p>
-                </div>
-                <div class="text-right">
-                <a data-articleId= {{this._id}} class="btn btn-light text-danger remove-btn" role="button">Remove from saved</a>
-                <a data-articleId= {{this._id}} class="btn btn-light text-success note-modal-btn">Add Note</a><br />
+                    <p class="card-text">{{this.summary}}</p>
+                    <div class="row">
+                        <div class="col-4">
+                            <a href={{this.link}} target="_blank" class="card-link">Read more...</a>
+                        </div>
+
+                        <div class="col-8 align-self-end text-right">
+                            <button class="btn btn-danger btn-sm m-2 btn-remove" data-id="{{this._id}}">Remove</button>
+                            <button class="btn btn-success btn-sm m-2 btn-view-notes" data-id="{{this._id}}">View
+                                Notes</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    {{/each}} 
+    </div>
+    {{/each}}
 </div>
 
-<div id="add-note-modal" class="modal" tabindex="-1" role="dialog" data-articleId="">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 id="note-modal-title" class="modal-title"></h5>
-      </div>
-      <div class="modal-body container">
-        <ul class="notes-list">
-        </ul>
-        <div class="form-group">
-          <label for="note-area">New Note</label>
-          <textarea name="new-note-area" class="form-control" id="note-body" rows="2" required></textarea>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary note-save-btn" data-dismiss="modal">Save</button>
 
-        </div>
-      </div>
+
+<div class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content"></div>
     </div>
-  </div>
+</div>
