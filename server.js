@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const eHandle = require('express-handlebars');
 
 let PORT = process.env.PORT || 3000;
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://blackice002:blackicemongo@002@ds231377.mlab.com:31377/heroku_9lfbdk0f";
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://newsscraper:blackice002@ds231377.mlab.com:31377/heroku_9lfbdk0f";
 
 // initialize express
 const app = express();
@@ -23,8 +23,7 @@ app.set('view engine', 'handlebars');
 
 // database configuration
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI, {userMongoClient: true});
-
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 // check connection status
 let db = mongoose.connection;
 db.on('error', (error)=>{
