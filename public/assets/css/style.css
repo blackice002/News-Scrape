@@ -17,20 +17,20 @@
     
 }
 body{
-    background-image: url("../img/1NFLwG.jpg");
+    background-image: url("../img/1NFLwGG.jpg");
     background-size:cover;
     background-attachment: fixed;
 
 }
 .card{
-    
+    background-color: rgba(187, 198, 212, 0.5);
     border-radius: 20px;
     -moz-border-radius: 10px;
-    border-left:20px solid rgba(1, 33, 75, .8 );
-    border-right:20px solid  rgba(1, 33, 75, .8 );
-    border-top:5px solid  rgba(1, 33, 75, .8 );
-    border-bottom:5px solid  rgba(1, 33, 75, .8 );
-    box-shadow: 0 4px 8px 0 rgba(194, 197, 204, 0.5), 0 6px 20px 0 rgba(194, 197, 204, 0.5);
+    border-left:20px solid rgba(0, 5, 12, 0.8);
+    border-right:20px solid  rgba(0, 5, 12, .8 );
+    border-top:5px solid  rgba(0, 5, 12, .5 );
+    border-bottom:5px solid  rgba(0, 5, 12, .5 );
+    box-shadow: 0 4px 8px 0 rgba(2, 52, 65, 0.7), 0 6px 20px 0 rgba(2, 52, 65, 0.7);
 }
 
 .navWrapper{
@@ -45,4 +45,21 @@ body{
 hr{
     margin:0;
     padding: 0;
+}
+/* #cardBg{
+    background-color: rgba(5, 30, 63, 0.5);
+    border-radius: 10px;
+} */
+.card-body{
+    margin:0;
+    padding:0
+}
+
+
+.card-title{
+    background-color: brown;
+    margin:0;
+    padding-left:5px;
+    padding-right:5px;
+    color:white
 }

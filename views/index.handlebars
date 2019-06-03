@@ -15,24 +15,23 @@
 </div>
 
 
-
 <div class="container">
     {{#each article}}
-    <div class="card bg-light mb-2">
-        <div class="row m-1 ">
+    <div class="card mb-2">
+        <div class="row m-1 " id="cardBg">
             <div class="align-self-center col-md-4 col-sm-12">
                 <img class="card-img" style="width:100%" src="{{this.image}}" alt="blackice">
             </div>
-            <div class="col-md-8 col-sm-12">
+            <div class="col-md-8 col-sm-12" id="text-content">
                 <div class="card-body">
-                    <h5 class="card-title" style="color:red">{{this.title}}</h5>
+                    <h5 class="card-title" >{{this.title}}</h5>
                     <p class="card-text">{{this.summary}}</p>
-                    <div class="row">
-                        <div class="col">
+                    <div  class="d-flex justify-content-between">
+                        <div class="col-6 align-self-center">
                             <a href={{this.link}} target="_blank" class="card-link">Read more...</a>
                         </div>
 
-                        <div class="col-lg-4 align-self-end text-right">
+                        <div class="col-6 text-right">
                             {{#if saved}}
                             <button class="btn btn-secondary btn-sm m-2 disabled">Article Saved</button>
                             {{else}}
