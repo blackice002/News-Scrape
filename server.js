@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const eHandle = require('express-handlebars');
 
 let PORT = process.env.PORT || 3000;
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://newsscraper:blackice002@ds231377.mlab.com:31377/heroku_9lfbdk0f";
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://blackice:blackice002@ds231387.mlab.com:31387/heroku_b8c4s8r6";
 
 // initialize express
 const app = express();
