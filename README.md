@@ -4,7 +4,7 @@
 
 https://blackice-news-ncraper.herokuapp.com/
 
-![screenshot of the homepage](public/assets/images/homeScreen.png)
+![screenshot of the homepage](public/assets/img/homeScreen.png)
 
 ## Get new articles, save favorites, and write notes
 
