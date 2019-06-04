@@ -2,7 +2,7 @@
 
  App built using MongoDB, Mongoose, Node.js, Express.js, Handlebars.js, HTML, and CSS. It scrapes the  android news from https://www.androidpolice.com homepage and stores article titles links picture, along with your notes , in MongoDB. The articles and notes collections reference each other through population.
 
-https://blackice-news-ncraper.herokuapp.com/
+https://blackicenews-scraper.herokuapp.com/articles
 
 ![screenshot of the homepage](public/assets/img/homeScreen.png)
 
