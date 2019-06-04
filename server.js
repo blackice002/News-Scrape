@@ -26,13 +26,13 @@ app.engine('handlebars', eHandle({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // database configuration
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://blackice:blackice002@ds231387.mlab.com:31387/heroku_b8c4s8r6";
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://blackice:blackice002@ds231377.mlab.com:31377/heroku_k6t8sd8k";
 
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 mongoose.Promise = Promise;
 // check connection status
 
-
+//new comment
 require('./routes/routes.js')(app);
 
 // start server
